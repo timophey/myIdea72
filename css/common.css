@@ -1,0 +1,156 @@
+@import url(../fonts/Onest/stylesheet.css);
+body {
+  color: #212121;
+  background: #F5F5F5;
+  font-family: 'Onest';
+}
+h1,
+h2,
+h3 {
+  font-weight: 400;
+  line-height: 100%;
+  text-transform: uppercase;
+  color: #212121;
+  margin: 20px;
+}
+h1 {
+  font-size: 80px;
+}
+@media (min-width: 960px) {
+  h1 {
+    font-size: 180px;
+  }
+}
+h2 {
+  font-size: 30px;
+}
+@media (min-width: 960px) {
+  h2 {
+    font-size: 80px;
+  }
+}
+h3 {
+  font-size: 22px;
+}
+@media (min-width: 960px) {
+  h3 {
+    font-size: 55px;
+  }
+}
+.title_case {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 48px 40px;
+  gap: 10px;
+  margin: 20px;
+  font-size: 18px;
+  line-height: 120%;
+  border: 1px solid #212121;
+  background: #F9F7F4;
+}
+.title_case.bg_dark {
+  background: #212121;
+  color: #FFFFFF;
+}
+.title_descr {
+  font-size: 18px;
+  line-height: 120%;
+  background: #F5F5F5;
+  box-shadow: inset 0 -2px 0 #ED2E38, inset 0 -12px 0 #F5F5F5, inset 0 -18px 0 #ED2E38, inset 0 -28px 0 #F5F5F5, inset 0 -38px 0 #ED2E38;
+  padding: 0 0 78px;
+  margin: 20px;
+}
+.title_mentor {
+  font-size: 18px;
+  line-height: 110%;
+  margin: 20px;
+  padding: 20px;
+  border-width: 1px 0px;
+  border-style: solid;
+  border-color: #212121;
+}
+.title_mentor_name {
+  text-transform: uppercase;
+}
+.org {
+  margin: 20px 0;
+  padding: 0 20px;
+  text-transform: uppercase;
+  max-width: 300px;
+  width: calc(100% - 40px);
+}
+.org_photo {
+  height: 300px;
+}
+.org_photo img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.org_name {
+  font-size: 22px;
+  line-height: 100%;
+  margin: 60px 0 20px;
+}
+.org_role {
+  font-size: 18px;
+  line-height: 120%;
+}
+.org_name,
+.org_role {
+  text-align: right;
+}
+@media (min-width: 960px) {
+  .org {
+    width: 360px;
+    max-width: 360px;
+  }
+  .org_photo {
+    height: 360px;
+  }
+  .org_name {
+    font-size: 50px;
+    margin: 40px 0 20px;
+  }
+}
+.popup_body {
+  width: 320px;
+  min-height: 360px;
+}
+@media (min-width: 960px) {
+  .popup_body {
+    width: 760px;
+  }
+}
+.popup_title {
+  font-size: 30px;
+  line-height: 110%;
+}
+.btn {
+  border-width: 1px 0px;
+  border-style: solid;
+  border-color: #212121;
+  padding: 18px 20px;
+  margin: 20px 0;
+}
+.btn.arrow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.btn.arrow:after {
+  display: block;
+  width: 16px;
+  height: 16px;
+  content: "";
+  background-color: #212121;
+  -webkit-mask-image: url(../img/arrow_topright.svg);
+          mask-image: url(../img/arrow_topright.svg);
+}
+.btn.arrow.r:after {
+  transform: rotate(45deg);
+}
+.btn.arrow.b:after {
+  transform: rotate(135deg);
+}
