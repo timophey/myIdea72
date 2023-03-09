@@ -313,7 +313,6 @@ body {
   padding: 0 10px;
   box-sizing: border-box;
   margin: 0 auto;
-  --vw: 100vw;
 }
 @media (min-width: 960px) {
   .container {
@@ -474,6 +473,9 @@ header .row {
   .hero_right .btn {
     margin: 40px 0 90px;
   }
+}
+footer {
+  margin-top: 60px;
 }
 footer .row {
   flex-direction: column;
