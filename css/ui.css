@@ -1,5 +1,4 @@
 @import url(../fonts/Onest/stylesheet.css);
-@import url(bootstrap_5/css/bootstrap-utilities.css);
 @font-face {
   font-family: 'Noto Color Emoji';
   src: url(../fonts/Noto_Color_Emoji/NotoColorEmoji-Regular.ttf);
@@ -296,30 +295,4 @@ h3 {
 }
 .checkbox_group input[type="checkbox"]:checked {
   background: var(--ui--checked) no-repeat 50%;
-}
-:root {
-  --vw: 100vw;
-}
-@media (min-width: 1200px) {
-  :root {
-    --vw: 1200px;
-  }
-}
-body {
-  margin: 0;
-}
-.container {
-  width: 100%;
-  padding: 0 10px;
-  box-sizing: border-box;
-  margin: 0 auto;
-  --vw: 100vw;
-}
-@media (min-width: 960px) {
-  .container {
-    max-width: 1200px;
-  }
-}
-.row {
-  display: flex;
 }

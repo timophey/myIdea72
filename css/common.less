@@ -1,7 +1,26 @@
 @import url(./ui.less);
-
+:root{
+    --vw: 100vw;
+    @media (min-width: 1200px) {
+        --vw: 1200px;
+    }
+}
+body{
+    margin: 0;
+}
 .container{
     width: 100%;
-    padding: 10px;
+    padding: 0 10px;
+    box-sizing: border-box;
+    margin: 0 auto;
+    --vw: 100vw;
+    @media (min-width: @desktop) {
+        max-width: 1200px;
+    }
+
+}
+.row{
+    display: flex;
 }
 
+@import url(./bootstrap_5/css/bootstrap-utilities.css);
