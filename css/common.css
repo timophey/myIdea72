@@ -313,7 +313,6 @@ body {
   padding: 0 10px;
   box-sizing: border-box;
   margin: 0 auto;
-  --vw: 100vw;
 }
 @media (min-width: 960px) {
   .container {
