@@ -44,5 +44,65 @@
         <div class="btn arrow r">Кнопка</div>
         <div class="btn arrow b">Кнопка</div>
     </div>
+
+    <div class="form_group">
+        <label for="">Наименование</label>
+        <div class="form_row">
+            <input type="text" class="form_control" placeholder="Подсказка значения">
+        </div>
+    </div>
+    <div class="form_group">
+        <label for="">Дата начала и окончания проекта:</label>
+        <div class="form_row">
+            <input type="text" class="form_control i_date" placeholder="хх/хх/хххх">
+            <input type="text" class="form_control i_date" placeholder="хх/хх/хххх">
+        </div>
+    </div>
+    <div class="form_group">
+        <label for="">Выбор:</label>
+        <div class="form_row">
+            <select type="date" class="form_control" placeholder="хх/хх/хххх">
+                <option value="" selected disabled>Выберите</option>
+                <option value="">Два</option>
+                <option value="">Три</option>
+                <option value="">Чтр</option>
+            </select>
+        </div>
+    </div>
+    <div class="popup">
+        <div class="popup_head">
+            <div class="popup_close"></div>
+        </div>
+        <div class="popup_title">
+            Заявка успешно отправлена 🤍
+        </div>
+        <div class="popup_foot">
+            <a href="" class="btn red">готово</a>
+        </div>
+    </div>
+    <h3>
+        Checkboxes
+    </h3>
+    <div class="form">
+        <label class="checkbox_group">
+            <input type="checkbox" name="" id="">
+            <span>значение</span>
+        </label>
+        <label class="checkbox_group">
+            <input type="checkbox" name="" id="" checked>
+            <span>значение</span>
+        </label>
+    </div>
+    <script>
+        document.querySelectorAll('.i_date').forEach(function(el,i){
+            el.addEventListener('focusin',function(e){
+                e.target.type = "date";
+                e.target.showPicker();
+            });
+            el.addEventListener('focusout',function(e){
+                e.target.type = "text";
+            });
+        });
+    </script>
 </body>
 </html>

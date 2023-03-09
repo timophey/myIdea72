@@ -1,8 +1,17 @@
 @import url(../fonts/Onest/stylesheet.css);
+@font-face {
+  font-family: 'Noto Color Emoji';
+  src: url(../fonts/Noto_Color_Emoji/NotoColorEmoji-Regular.ttf);
+}
+:root {
+  --ui--checked: url("data:image/svg+xml,%3Csvg width='12' height='10' viewBox='0 0 12 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11.6501 2.15L4.6001 9.2L0.350098 4.95L1.7501 3.55L4.6001 6.4L10.2501 0.75L11.6501 2.15Z' fill='%23ED2E38'/%3E%3C/svg%3E");
+}
 body {
   color: #212121;
   background: #F5F5F5;
-  font-family: 'Onest';
+  font-family: 'Onest', 'Noto Color Emoji';
+  font-size: 18px;
+  line-height: 110%;
 }
 h1,
 h2,
@@ -114,15 +123,6 @@ h3 {
     margin: 40px 0 20px;
   }
 }
-.popup_body {
-  width: 320px;
-  min-height: 360px;
-}
-@media (min-width: 960px) {
-  .popup_body {
-    width: 760px;
-  }
-}
 .popup_title {
   font-size: 30px;
   line-height: 110%;
@@ -133,6 +133,7 @@ h3 {
   border-color: #212121;
   padding: 18px 20px;
   margin: 20px 0;
+  display: inline-block;
 }
 .btn.arrow {
   display: flex;
@@ -153,4 +154,101 @@ h3 {
 }
 .btn.arrow.b:after {
   transform: rotate(135deg);
+}
+.form_group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+}
+.form label {
+  font-size: 18px;
+  line-height: 120%;
+}
+.form_row {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 20px 40px;
+  margin: 0 0 18px;
+  flex-wrap: wrap;
+}
+.form_control {
+  border: 1px solid #212121;
+  padding: 20px;
+  font-size: 18px;
+  line-height: 20px;
+}
+.form_control::placeholder {
+  color: #212121;
+  opacity: 0.3;
+  text-transform: uppercase;
+}
+.form_group select {
+  -webkit-appearance: none;
+          appearance: none;
+  padding: 20px 20px 20px 50px;
+  position: relative;
+  background: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1.5L6 6.5L11 1.5' stroke='%23212121' stroke-width='2'/%3E%3C/svg%3E") no-repeat 20px 50%;
+}
+.popup {
+  background-color: #ED2E38;
+  color: #FFFFFF;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 20px;
+  gap: 50px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  min-height: 360px;
+}
+@media (min-width: 960px) {
+  .popup {
+    width: 760px;
+  }
+}
+.popup_head {
+  display: flex;
+  justify-content: flex-end;
+}
+.popup_close {
+  background: url(../img/cross_white.svg) no-repeat;
+  width: 25px;
+  height: 25px;
+  display: block;
+}
+.popup_title {
+  font-size: 30px;
+  line-height: 110%;
+}
+@media (min-width: 960px) {
+  .popup_title {
+    font-size: 50px;
+  }
+}
+.popup .btn {
+  border-color: #FFFFFF;
+  color: #FFFFFF;
+  padding: 18px 64px;
+}
+.checkbox_group {
+  text-transform: uppercase;
+  display: flex;
+  gap: 20px;
+}
+.checkbox_group input[type="checkbox"] {
+  border: 1px solid #ED2E38;
+  width: 1em;
+  height: 1em;
+  -webkit-appearance: none;
+          appearance: none;
+}
+.checkbox_group input[type="checkbox"]:checked {
+  background: var(--ui--checked) no-repeat 50%;
+}
+.container {
+  width: 100%;
+  padding: 10px;
 }
