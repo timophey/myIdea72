@@ -6,9 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ИМ Сайт 2023 / FORM</title>
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/carousel.css">
 </head>
 <body>
-    <header>
+    <header class="">
         <div class="container">
             <div class="row">
                 <a href="#" class="logo"></a>
@@ -17,7 +18,8 @@
             </div>
         </div>
     </header>
-    <div class="hero">
+    
+    <div class="hero d-none">
         <!-- <div class="container"> -->
             <div class="row">
                 <div class="hero_arrow"></div>
@@ -31,6 +33,28 @@
                 </div>
             <!-- </div> -->
         </div>
+    </div>
+    <div class="container">
+        <div class="carousel" data-length="11" style="--length:11;--current:0;">
+            <div class="carousel_arrow"></div>
+            <div class="carousel_track">
+                <div class="carousel_flex">
+                    <a class="" href="/form">Общая информация</a>
+                    <a class="" href="/form/leader">Руководитель проекта</a>
+                    <a class="" href="/form/team">Команда</a>
+                    <a class="" href="/form/mentor">Наставник</a>
+                    <a class="" href="/form/project">О проекте</a>
+                    <a class="" href="/form/media">Медиа</a>
+                    <a class="" href="/form/plan">Календарный план</a>
+                    <a class="" href="/form/result">Результаты</a>
+                    <a class="" href="/form/cofinancing">Софинансирование</a>
+                    <a class="" href="/form/financing">Средства Партнеров</a>
+                    <a class="" href="/form/estimate">Смета расходов</a>
+                </div>
+            </div>
+            <div class="carousel_arrow"></div>
+        </div>
+
     </div>
     <!-- <nav>
         
@@ -230,6 +254,35 @@
                     </div>
                 </div>
             </div>
+
+            <div class="form_table">
+                <div class="form_group">
+                    <label for="">Наименование</label>
+                    <input type="text" class="form_control w100" placeholder="">
+                </div>
+                <div class="form_group">
+                    <label for="">Наименование</label>
+                    <input type="text" class="form_control w100" placeholder="">
+                </div>
+                <div class="form_group">
+                    <label for="">Наименование</label>
+                    <input type="text" class="form_control w100" placeholder="">
+                </div>
+                <div class="form_group">
+                    <label for="">Наименование</label>
+                    <input type="text" class="form_control w100" placeholder="">
+                </div>
+                <div class="form_group">
+                    <label for="">Наименование</label>
+                    <input type="text" class="form_control w100" placeholder="">
+                </div>
+                <div class="form_group">
+                    <label for="">Наименование</label>
+                    <input type="text" class="form_control w100" placeholder="">
+                </div>
+                
+            </div>
+
         </form>
     </div>
     <div class="popup">

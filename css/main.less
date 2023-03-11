@@ -65,7 +65,7 @@ header{
     text-transform: uppercase;
     --pos35: calc(var(--vw) / 12 * 7);
     // --pos25: calc(var(--vw) / 12 * 5);
-
+    overflow: hidden;
     .row{
         flex-direction: column;
         gap: 20px;
@@ -109,13 +109,14 @@ header{
             position: absolute;
             top: 0; left: var(--pos35);
             width: calc(var(--vw) - var(--pos35) + (100vw - var(--vw)) / 2);
+            overflow: hidden;
             &:after{
                 display: block; content: ""; height: 38px; 
                 width: calc((100vw - var(--vw)) / 2);
                 background-color: @red;
                 position: absolute;
                 top: calc(50% - 21px);
-                left: calc(var(--vw) - var(--pos35));
+                left: calc(var(--vw) - var(--pos35) - 20px);
             }
         }
     }
@@ -143,7 +144,6 @@ footer{
     .row{
         flex-direction: column;
         gap: 60px;
-
     }
     .logo{
         display: block; width: 180px; height: 40px;
@@ -185,4 +185,78 @@ footer{
     // &_group{
     //     margin: 60px 0;
     // }
+}
+
+.carousel{
+    --length:11;
+    --current:0;
+    --links-per-line: 1;
+    // --links-per-line: calc(100vw / 320px);
+    --link-width: calc((var(--vw) - 60px) / var(--links-per-line));
+    height: 50px;
+    // background: red;
+    
+    
+    display: flex;
+    &_arrow{
+        // background: rgba(255,255,0,.5);
+        // display: block; 
+        width: 50px;height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 -17px;
+
+        &:after{
+            display: block; height: 25px; width: 13px; content: "";
+            background: var(--ui--caro_arrow) no-repeat 50% rgba(255,88,255,0);
+            background-size: contain;
+        }
+        &:last-child{
+            transform: rotate(180deg);
+        }
+        &:hover{
+            cursor: pointer;
+            &:after{
+                transform: translateX(-2px);
+            }
+        }
+        position: relative; z-index: 1;
+    }
+    &_track{
+        width: calc(100% - 34px);
+        position: relative;
+        height: 50px;
+        overflow: hidden;
+    }
+    &_flex{
+        position: absolute; left: 0;
+        display: flex;
+        // --move-x = 
+        transform: translateX(calc(var(--current) * var(--link-width) * -1));
+        transition: all .3s;
+    }
+    a{
+        color: @dark;
+        white-space: nowrap;
+        width: var(--link-width);
+        text-align: center;
+        font-size: 22px;
+        line-height: 50px;
+        // line-height: 100%;
+        text-transform: uppercase;
+        text-decoration: none;
+        &:hover, &.active{
+            text-decoration: underline;
+        }
+    }
+    @media (min-width: 640px) {
+        --links-per-line: 2;
+    }
+    @media (min-width: 960px) {
+        --links-per-line: 3;
+    }
+    @media (min-width: 1200px) {
+        --links-per-line: 4;
+    }
 }
